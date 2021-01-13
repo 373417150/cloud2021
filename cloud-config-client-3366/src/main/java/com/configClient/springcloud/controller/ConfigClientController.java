@@ -11,13 +11,13 @@ public class ConfigClientController
 {
     @Value("${config.info}")
     private String configInfo;
+
     @Value("${server.port}")
     private String serverPort;
 
     @GetMapping("/configInfo")
     public String getConfigInfo()
     {
-        //http://localhost:3355/configInfo
-        return "serverPort"+serverPort+"===" +configInfo;
+        return "serverPort"+serverPort+"==="+configInfo;
     }
 }
