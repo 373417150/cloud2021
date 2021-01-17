@@ -3,8 +3,7 @@ package com.sss.springcloud.controller;
  import com.sss.springcloud.entity.CommonResult;
 import com.sss.springcloud.entity.Payment;
 import com.sss.springcloud.service.PaymentService;
-//import lombok.Value;
-  import lombok.extern.slf4j.Slf4j;
+ import lombok.extern.slf4j.Slf4j;
  import org.slf4j.Logger;
  import org.slf4j.LoggerFactory;
  import org.springframework.beans.factory.annotation.Value;
@@ -23,7 +22,6 @@ import java.util.List;
  * @version: 1.0.0
  */
 @RestController
-@Slf4j
 public class PaymentController {
     private static final Logger log = LoggerFactory.getLogger(PaymentController.class);
 
@@ -73,6 +71,16 @@ public class PaymentController {
             log.info("instances+++++"+ins.getServiceId()+"\t"+ins.getHost()+"\t"+ins.getPort()+"\t"+ins.getUri());
         }
         return this.discoveryClient;
+    }
+
+    /**
+     * 简单的链路跟踪  调用方法
+     * @return
+     */
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin()
+    {
+        return "hi ,i'am paymentzipkin server fall back，welcome to atguigu，O(∩_∩)O哈哈~";
     }
 }
 
