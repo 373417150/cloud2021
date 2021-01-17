@@ -23,6 +23,9 @@
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-providerconsul-payment8006" />
+        <module name="cloud-stream-rabbitmq-consumer8802" />
+        <module name="cloud-stream-rabbitmq-consumer8803" />
+        <module name="cloud-stream-rabbitmq-provider-8801" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -43,6 +46,9 @@
       <module name="cloud-provider-payment8001" target="1.8" />
       <module name="cloud-provider-payment8002" target="1.8" />
       <module name="cloud-providerconsul-payment8006" target="1.8" />
+      <module name="cloud-stream-rabbitmq-consumer8802" target="1.8" />
+      <module name="cloud-stream-rabbitmq-consumer8803" target="1.8" />
+      <module name="cloud-stream-rabbitmq-provider-8801" target="1.8" />
       <module name="cloud2020" target="1.8" />
     </bytecodeTargetLevel>
   </component>
